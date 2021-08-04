@@ -6,33 +6,32 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import com.lcadevelop.android.minitwitter.R;
 
-public class LoginActivity extends AppCompatActivity
+public class SignUpActivity extends AppCompatActivity
 {
-    Button btnlogin;
-    TextView txtregister;
+    Button btnSignUp;
+    Button btnCancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_sign_up);
 
-        btnlogin = findViewById(R.id.id_btn_login);
-        btnlogin.setOnClickListener(new View.OnClickListener() {
+        btnSignUp = findViewById(R.id.id_btn_sign);
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
+
             }
         });
 
-        txtregister = (TextView) findViewById(R.id.id_txt_login_registro);
-        txtregister.setOnClickListener(new View.OnClickListener() {
+        btnCancel = findViewById(R.id.id_btn_sign_cancel);
+        btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }

@@ -10,12 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiniTwitter">
         <activity
+            android:name=".userinterfaces.SignUpActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MiniTwitter.Fullscreen"/>
+        <activity
             android:name=".userinterfaces.LoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/Theme.MiniTwitter.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

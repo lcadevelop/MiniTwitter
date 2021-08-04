@@ -11,4 +11,7 @@
     <string name="hint_password">Contraseña</string>
     <string name="btn_login">Iniciar Sesión</string>
     <string name="txt_login_register">Registrarse</string>
+
+    <string name="txt_user_sign">Nombre de Usuario</string>
+    <string name="btn_sign_cancel">Cancelar</string>
 </resources>
