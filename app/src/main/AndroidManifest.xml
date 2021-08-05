@@ -3,6 +3,7 @@
     package="com.lcadevelop.android.minitwitter">
 
     <application
+        android:name=".common.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_minitwitter"
         android:label="@string/app_name"
