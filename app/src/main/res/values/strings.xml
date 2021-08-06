@@ -14,4 +14,11 @@
 
     <string name="txt_user_sign">Nombre de Usuario</string>
     <string name="btn_sign_cancel">Cancelar</string>
+
+    <string name="email_error">Valor requerido</string>
+    <string name="password_error">Valor requerido</string>
+    <string name="network_error">Error de Conexión</string>
+
+    <string name="login_ok">Sesión Iniciada</string>
+    <string name="login_fail">Revise sus Datos</string>
 </resources>

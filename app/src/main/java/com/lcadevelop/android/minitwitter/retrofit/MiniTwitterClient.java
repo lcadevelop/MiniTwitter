@@ -1,7 +1,6 @@
 package com.lcadevelop.android.minitwitter.retrofit;
 
 import com.lcadevelop.android.minitwitter.common.Constant;
-
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
