@@ -8,14 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.lcadevelop.android.minitwitter.DashboardActivity;
 import com.lcadevelop.android.minitwitter.R;
 import com.lcadevelop.android.minitwitter.retrofit.MiniTwitterClient;
 import com.lcadevelop.android.minitwitter.retrofit.MiniTwitterService;
 import com.lcadevelop.android.minitwitter.retrofit.request.RequestLogin;
 import com.lcadevelop.android.minitwitter.retrofit.response.ResponseLogin;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
