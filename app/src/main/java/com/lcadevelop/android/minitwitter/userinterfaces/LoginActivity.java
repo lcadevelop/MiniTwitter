@@ -3,7 +3,6 @@ package com.lcadevelop.android.minitwitter.userinterfaces;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -58,21 +57,9 @@ public class LoginActivity extends AppCompatActivity
 
     public void eventsInit()
     {
-        btnlogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
-                doLogin();
-            }
-        });
+        btnlogin.setOnClickListener(view -> doLogin());
 
-        txtregister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
-                doRegister();
-            }
-        });
+        txtregister.setOnClickListener(view -> doRegister());
     }
 
     public void doLogin()
@@ -95,24 +82,24 @@ public class LoginActivity extends AppCompatActivity
 
                     responseLoginCall.enqueue(new Callback<ResponseLogin>() {
                         @Override
-                        public void onResponse(Call<ResponseLogin> call, Response<ResponseLogin> response)
+                        public void onResponse(Call<ResponseLogin> responseLoginCall, Response<ResponseLogin> response)
                         {
                             if (response.isSuccessful())
                             {
-                                Toast.makeText(LoginActivity.this, R.string.login_ok, Toast.LENGTH_LONG);
+                                Toast.makeText(LoginActivity.this, R.string.login_ok, Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                                 startActivity(intent);
                                 finish();
                             }
                             else
                             {
-                                Toast.makeText(LoginActivity.this, R.string.login_fail, Toast.LENGTH_LONG);
+                                Toast.makeText(LoginActivity.this, R.string.login_fail, Toast.LENGTH_LONG).show();
                             }
                         }
                         @Override
-                        public void onFailure(Call<ResponseLogin> call, Throwable t)
+                        public void onFailure(Call<ResponseLogin> responseLoginCall, Throwable t)
                         {
-                            Toast.makeText(LoginActivity.this, R.string.network_error, Toast.LENGTH_LONG);
+                            Toast.makeText(LoginActivity.this, R.string.network_error, Toast.LENGTH_LONG).show();
                         }
                     });
                 }

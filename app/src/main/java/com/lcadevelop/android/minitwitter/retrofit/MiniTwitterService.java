@@ -1,6 +1,7 @@
 package com.lcadevelop.android.minitwitter.retrofit;
 
 import com.lcadevelop.android.minitwitter.retrofit.request.RequestLogin;
+import com.lcadevelop.android.minitwitter.retrofit.request.RequestSignUp;
 import com.lcadevelop.android.minitwitter.retrofit.response.ResponseLogin;
 import com.lcadevelop.android.minitwitter.retrofit.response.ResponseSignUp;
 
@@ -14,5 +15,5 @@ public interface MiniTwitterService
     Call<ResponseLogin> doLogin(@Body RequestLogin requestLogin);
 
     @POST("auth/signup")
-    Call<ResponseSignUp> doSignUp(@Body ResponseSignUp responseSignUp);
+    Call<ResponseSignUp> doSignUp(@Body RequestSignUp requestSignUp);
 }
