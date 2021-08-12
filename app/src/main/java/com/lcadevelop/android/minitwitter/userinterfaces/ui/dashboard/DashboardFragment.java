@@ -1,4 +1,4 @@
-package com.lcadevelop.android.minitwitter.ui.dashboard;
+package com.lcadevelop.android.minitwitter.userinterfaces.ui.dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.lcadevelop.android.minitwitter.R;
 import com.lcadevelop.android.minitwitter.databinding.FragmentDashboardBinding;
 
 public class DashboardFragment extends Fragment {

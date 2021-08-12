@@ -1,4 +1,4 @@
-package com.lcadevelop.android.minitwitter.ui.home;
+package com.lcadevelop.android.minitwitter.userinterfaces.ui.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.lcadevelop.android.minitwitter.R;
 import com.lcadevelop.android.minitwitter.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
