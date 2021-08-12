@@ -9,6 +9,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.lcadevelop.android.minitwitter.DashboardActivity;
 import com.lcadevelop.android.minitwitter.R;
+import com.lcadevelop.android.minitwitter.common.Constant;
+import com.lcadevelop.android.minitwitter.common.SharedPreferencesManager;
 import com.lcadevelop.android.minitwitter.retrofit.MiniTwitterClient;
 import com.lcadevelop.android.minitwitter.retrofit.MiniTwitterService;
 import com.lcadevelop.android.minitwitter.retrofit.request.RequestLogin;
@@ -86,6 +88,14 @@ public class LoginActivity extends AppCompatActivity
                         {
                             if (response.isSuccessful())
                             {
+                                SharedPreferencesManager.setSomeStringValue(Constant.PREFERENCE_TOKEN, response.body().getToken());
+                                SharedPreferencesManager.setSomeStringValue(Constant.PREFERENCE_USERNAME, response.body().getUsername());
+                                SharedPreferencesManager.setSomeStringValue(Constant.PREFERENCE_EMAIL, response.body().getEmail());
+                                SharedPreferencesManager.setSomeStringValue(Constant.PREFERENCE_URL_PHOTO, response.body().getPhotoUrl());
+                                SharedPreferencesManager.setSomeStringValue(Constant.PREFERENCE_CREATED, response.body().getCreated());
+                                SharedPreferencesManager.setSomeBolleanValue(Constant.PREFERENCE_ACTIVE, response.body().getActive());
+
+
                                 Toast.makeText(LoginActivity.this, R.string.login_ok, Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                                 startActivity(intent);

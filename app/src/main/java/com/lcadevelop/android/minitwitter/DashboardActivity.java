@@ -1,21 +1,28 @@
 package com.lcadevelop.android.minitwitter;
 
 import android.os.Bundle;
+import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import com.lcadevelop.android.minitwitter.common.Constant;
+import com.lcadevelop.android.minitwitter.common.SharedPreferencesManager;
 import com.lcadevelop.android.minitwitter.databinding.ActivityDashboardBinding;
 
 public class DashboardActivity extends AppCompatActivity {
 
     private ActivityDashboardBinding binding;
+    private String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        token = SharedPreferencesManager.getSomeStringValue(Constant.PREFERENCE_TOKEN);
+        Toast.makeText(DashboardActivity.this, "Token: "+token, Toast.LENGTH_LONG).show();
 
         binding = ActivityDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

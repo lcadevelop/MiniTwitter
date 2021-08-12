@@ -4,7 +4,6 @@ import com.lcadevelop.android.minitwitter.retrofit.request.RequestLogin;
 import com.lcadevelop.android.minitwitter.retrofit.request.RequestSignUp;
 import com.lcadevelop.android.minitwitter.retrofit.response.ResponseLogin;
 import com.lcadevelop.android.minitwitter.retrofit.response.ResponseSignUp;
-
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.POST;

@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.lcadevelop.android.minitwitter.DashboardActivity;
 import com.lcadevelop.android.minitwitter.R;
 import com.lcadevelop.android.minitwitter.common.Constant;
+import com.lcadevelop.android.minitwitter.common.SharedPreferencesManager;
 import com.lcadevelop.android.minitwitter.retrofit.MiniTwitterClient;
 import com.lcadevelop.android.minitwitter.retrofit.MiniTwitterService;
 import com.lcadevelop.android.minitwitter.retrofit.request.RequestSignUp;
@@ -90,6 +91,13 @@ public class SignUpActivity extends AppCompatActivity
                 public void onResponse(Call<ResponseSignUp> responseSignUpCall, Response<ResponseSignUp> response) {
                     if (response.isSuccessful())
                     {
+                        SharedPreferencesManager.setSomeStringValue(Constant.PREFERENCE_TOKEN, response.body().getToken());
+                        SharedPreferencesManager.setSomeStringValue(Constant.PREFERENCE_USERNAME, response.body().getUsername());
+                        SharedPreferencesManager.setSomeStringValue(Constant.PREFERENCE_EMAIL, response.body().getEmail());
+                        SharedPreferencesManager.setSomeStringValue(Constant.PREFERENCE_URL_PHOTO, response.body().getPhotoUrl());
+                        SharedPreferencesManager.setSomeStringValue(Constant.PREFERENCE_CREATED, response.body().getCreated());
+                        SharedPreferencesManager.setSomeBolleanValue(Constant.PREFERENCE_ACTIVE, response.body().getActive());
+
                         Toast.makeText(SignUpActivity.this, R.string.signup_ok, Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(SignUpActivity.this, DashboardActivity.class);
                         startActivity(intent);
