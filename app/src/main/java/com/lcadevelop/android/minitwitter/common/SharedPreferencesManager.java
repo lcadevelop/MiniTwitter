@@ -19,21 +19,21 @@ public class SharedPreferencesManager {
 
         SharedPreferences.Editor editor = getSharedPreferences().edit();
         editor.putString(dataLabel, dataValue);
-        editor.commit();
+        editor.apply();
     }
 
     public static void setSomeBolleanValue(String dataLabel, boolean dataValue) {
 
         SharedPreferences.Editor editor = getSharedPreferences().edit();
         editor.putBoolean(dataLabel, dataValue);
-        editor.commit();
+        editor.apply();
     }
 
     public static void setSomeIntValue(String dataLabel, int dataValue) {
 
         SharedPreferences.Editor editor = getSharedPreferences().edit();
         editor.putInt(dataLabel, dataValue);
-        editor.commit();
+        editor.apply();
     }
 
     public static String getSomeStringValue(String dataLabel) {

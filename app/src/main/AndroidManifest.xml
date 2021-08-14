@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lcadevelop.android.minitwitter">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".common.MyApp"
@@ -14,22 +14,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiniTwitter">
         <activity
+            android:name=".userinterfaces.MainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.MiniTwitter.NoActionBar" />
+        <activity
             android:name=".userinterfaces.SignUpActivity"
             android:exported="true"
-            android:theme="@style/Theme.MiniTwitter.Fullscreen"/>
+            android:theme="@style/Theme.MiniTwitter.Fullscreen" />
         <activity
             android:name=".userinterfaces.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.MiniTwitter.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".userinterfaces.DashboardActivity"
-            android:exported="true"
-            android:label="@string/title_activity_dashboard" />
     </application>
 
 </manifest>

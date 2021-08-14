@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity
 
 
                                 Toast.makeText(LoginActivity.this, R.string.login_ok, Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 startActivity(intent);
                                 finish();
                             }

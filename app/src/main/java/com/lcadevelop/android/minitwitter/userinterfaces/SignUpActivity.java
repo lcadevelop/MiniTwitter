@@ -99,7 +99,7 @@ public class SignUpActivity extends AppCompatActivity
                         SharedPreferencesManager.setSomeBolleanValue(Constant.PREFERENCE_ACTIVE, response.body().getActive());
 
                         Toast.makeText(SignUpActivity.this, R.string.signup_ok, Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(SignUpActivity.this, DashboardActivity.class);
+                        Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                         startActivity(intent);
                         finish();
                     }else {
