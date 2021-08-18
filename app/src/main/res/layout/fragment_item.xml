@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+
+        android:id="@+id/id_image_tweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_logo_minituiter_mini"/>
+
+    <TextView
+        android:id="@+id/id_text_user_tweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/id_image_tweet"
+        app:layout_constraintStart_toEndOf="@+id/id_image_tweet"
+        android:layout_marginStart="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/tweet_username"/>
+
+    <TextView
+        android:id="@+id/id_text_message_tweet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_user_tweet"
+        app:layout_constraintStart_toEndOf="@+id/id_image_tweet"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:text="@string/tweet_message"/>
+
+    <ImageView
+        android:id="@+id/id_image_tweet_like"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_message_tweet"
+        app:layout_constraintStart_toEndOf="@+id/id_image_tweet"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_like"/>
+
+    <TextView
+        android:id="@+id/id_text_like_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/id_image_tweet_like"
+        app:layout_constraintStart_toEndOf="@+id/id_image_tweet_like"
+        android:layout_marginStart="8dp"
+        android:text="@string/tweet_likes"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

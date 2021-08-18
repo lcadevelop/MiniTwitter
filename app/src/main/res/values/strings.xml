@@ -35,4 +35,8 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_main">MainActivity</string>
+
+    <string name="tweet_username">Tweet Username</string>
+    <string name="tweet_message">Tweet Message</string>
+    <string name="tweet_likes">0</string>
 </resources>
