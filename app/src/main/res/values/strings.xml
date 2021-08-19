@@ -23,6 +23,9 @@
     <string name="login_ok">Sesión Iniciada</string>
     <string name="login_fail">Revise sus Datos</string>
 
+    <string name="listtweet_ok">Lista de Tweets</string>
+    <string name="listtweet_fail">Error al recibir los Tweets</string>
+
     <string name="signup_ok">Registro Exitoso</string>
     <string name="signup_fail">Registro Fallido</string>
     <string name="title_activity_prueba">PruebaActivity</string>

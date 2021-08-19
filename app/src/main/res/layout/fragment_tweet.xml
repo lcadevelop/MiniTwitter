@@ -10,13 +10,15 @@
     <de.hdodenhof.circleimageview.CircleImageView
         app:civ_border_width="2dp"
         app:civ_border_color="#FF000000"
-
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
         android:id="@+id/id_image_tweet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="16dp"
         android:src="@drawable/ic_logo_minituiter_mini"/>
 
     <TextView
@@ -57,6 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/id_image_tweet_like"
+        app:layout_constraintBottom_toBottomOf="@+id/id_image_tweet_like"
         app:layout_constraintStart_toEndOf="@+id/id_image_tweet_like"
         android:layout_marginStart="8dp"
         android:text="@string/tweet_likes"/>

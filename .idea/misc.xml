@@ -3,8 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_like_pink.xml" value="0.2824074074074074" />
+        <entry key="app/src/main/res/drawable/ic_logo_minitwitter_white.xml" value="0.33350357507660877" />
+        <entry key="app/src/main/res/drawable/ic_write_tweet_white.xml" value="0.2962962962962963" />
         <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.23550724637681159" />
         <entry key="app/src/main/res/layout/activity_fullscreen.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.152" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.25317028985507245" />
+        <entry key="app/src/main/res/layout/fragment_item.xml" value="0.29347826086956524" />
+        <entry key="app/src/main/res/layout/fragment_item_list.xml" value="0.31068840579710144" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.31979166666666664" />
       </map>
     </option>
   </component>
@@ -13,5 +23,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.176" />
+      </ProjectState>
+    </option>
   </component>
 </project>

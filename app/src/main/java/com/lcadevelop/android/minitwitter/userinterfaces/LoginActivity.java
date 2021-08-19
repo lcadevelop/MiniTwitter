@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.lcadevelop.android.minitwitter.R;
 import com.lcadevelop.android.minitwitter.common.Constant;
 import com.lcadevelop.android.minitwitter.common.SharedPreferencesManager;

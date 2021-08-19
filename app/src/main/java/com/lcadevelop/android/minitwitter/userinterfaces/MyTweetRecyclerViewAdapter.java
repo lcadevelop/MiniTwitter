@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,7 +13,6 @@ import com.bumptech.glide.Glide;
 import com.lcadevelop.android.minitwitter.R;
 import com.lcadevelop.android.minitwitter.common.Constant;
 import com.lcadevelop.android.minitwitter.common.SharedPreferencesManager;
-import com.lcadevelop.android.minitwitter.databinding.FragmentItemBinding;
 import com.lcadevelop.android.minitwitter.retrofit.response.Like;
 import com.lcadevelop.android.minitwitter.retrofit.response.Tweet;
 import java.util.List;
@@ -31,7 +31,10 @@ public class MyTweetRecyclerViewAdapter extends RecyclerView.Adapter<MyTweetRecy
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(FragmentItemBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_tweet, parent, false);
+        return new ViewHolder(view);
+
+        //return new ViewHolder(FragmentItemBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
@@ -57,7 +60,7 @@ public class MyTweetRecyclerViewAdapter extends RecyclerView.Adapter<MyTweetRecy
 
         holder.tweetUsername.setText(holder.mItem.getUser().getUsername());
         holder.tweetMessage.setText(holder.mItem.getMensaje());
-        holder.tweetNumberLikes.setText(holder.mItem.getLikes().size());
+        holder.tweetNumberLikes.setText(String.valueOf(holder.mItem.getLikes().size()));
     }
 
     @Override
@@ -73,13 +76,13 @@ public class MyTweetRecyclerViewAdapter extends RecyclerView.Adapter<MyTweetRecy
         public final TextView tweetNumberLikes;
         public Tweet mItem;
 
-        public ViewHolder(FragmentItemBinding binding) {
-            super(binding.getRoot());
-            tweetAvatar = binding.idImageTweet;
-            tweetLikes = binding.idImageTweetLike;
-            tweetUsername = binding.idTextUserTweet;
-            tweetMessage = binding.idTextMessageTweet;
-            tweetNumberLikes = binding.idTextLikeNumber;
+        public ViewHolder(View view) {
+            super(view);
+            tweetAvatar = view.findViewById(R.id.id_image_tweet);
+            tweetLikes = view.findViewById(R.id.id_image_tweet_like);
+            tweetUsername = view.findViewById(R.id.id_text_user_tweet);
+            tweetMessage = view.findViewById(R.id.id_text_message_tweet);
+            tweetNumberLikes = view.findViewById(R.id.id_text_like_number);
         }
 
         @Override
