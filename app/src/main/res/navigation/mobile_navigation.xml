@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.lcadevelop.android.minitwitter.userinterfaces.TweetFragment"
+        android:name="com.lcadevelop.android.minitwitter.ui.home.TweetListFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_tweet_list" />
+        tools:layout="@layout/fragment_tweetlist" />
 
     <fragment
         android:id="@+id/navigation_favorite"
-        android:name="com.lcadevelop.android.minitwitter.userinterfaces.ui.dashboard.DashboardFragment"
+        android:name="com.lcadevelop.android.minitwitter.ui.favorites.FavoritesFragment"
         android:label="@string/title_favorites"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_account"
-        android:name="com.lcadevelop.android.minitwitter.userinterfaces.ui.notifications.NotificationsFragment"
+        android:name="com.lcadevelop.android.minitwitter.ui.account.AccountFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

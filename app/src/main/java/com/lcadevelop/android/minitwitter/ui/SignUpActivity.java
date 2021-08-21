@@ -1,4 +1,4 @@
-package com.lcadevelop.android.minitwitter.userinterfaces;
+package com.lcadevelop.android.minitwitter.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -14,6 +14,8 @@ import com.lcadevelop.android.minitwitter.retrofit.MiniTwitterClient;
 import com.lcadevelop.android.minitwitter.retrofit.MiniTwitterService;
 import com.lcadevelop.android.minitwitter.retrofit.request.RequestSignUp;
 import com.lcadevelop.android.minitwitter.retrofit.response.ResponseSignUp;
+import com.lcadevelop.android.minitwitter.ui.home.MainActivity;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

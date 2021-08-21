@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list"
-    android:name="com.lcadevelop.android.minitwitter.userinterfaces.TweetFragment"
+    android:name="com.lcadevelop.android.minitwitter.userinterfaces.ui.home.TweetListFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".userinterfaces.TweetFragment"
-    tools:listitem="@layout/fragment_tweet" />
+    tools:context=".ui.home.TweetListFragment"
+    tools:listitem="@layout/fragment_one_tweet" />

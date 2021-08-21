@@ -14,16 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiniTwitter">
         <activity
-            android:name=".userinterfaces.MainActivity"
+            android:name=".ui.home.MainActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.MiniTwitter.NoActionBar" />
         <activity
-            android:name=".userinterfaces.SignUpActivity"
+            android:name=".ui.SignUpActivity"
             android:exported="true"
             android:theme="@style/Theme.MiniTwitter.Fullscreen" />
         <activity
-            android:name=".userinterfaces.LoginActivity"
+            android:name=".ui.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.MiniTwitter.Fullscreen">
             <intent-filter>

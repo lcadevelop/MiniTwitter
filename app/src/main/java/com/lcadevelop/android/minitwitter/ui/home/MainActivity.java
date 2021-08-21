@@ -1,7 +1,6 @@
-package com.lcadevelop.android.minitwitter.userinterfaces;
+package com.lcadevelop.android.minitwitter.ui.home;
 
 import android.os.Bundle;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
