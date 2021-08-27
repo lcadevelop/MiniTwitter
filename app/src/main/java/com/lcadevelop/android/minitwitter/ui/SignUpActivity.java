@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.lcadevelop.android.minitwitter.R;
 import com.lcadevelop.android.minitwitter.common.Constant;
 import com.lcadevelop.android.minitwitter.common.SharedPreferencesManager;
@@ -15,7 +14,6 @@ import com.lcadevelop.android.minitwitter.retrofit.MiniTwitterService;
 import com.lcadevelop.android.minitwitter.retrofit.request.RequestSignUp;
 import com.lcadevelop.android.minitwitter.retrofit.response.ResponseSignUp;
 import com.lcadevelop.android.minitwitter.ui.home.MainActivity;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

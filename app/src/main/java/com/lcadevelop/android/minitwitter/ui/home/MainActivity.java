@@ -1,14 +1,17 @@
 package com.lcadevelop.android.minitwitter.ui.home;
 
 import android.os.Bundle;
+import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import com.lcadevelop.android.minitwitter.common.Constant;
+import com.lcadevelop.android.minitwitter.common.SharedPreferencesManager;
 import com.lcadevelop.android.minitwitter.databinding.ActivityMainBinding;
 import com.lcadevelop.android.minitwitter.R;
 
@@ -16,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    private ImageView imageViewPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +30,17 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
+        imageViewPerfil = findViewById(R.id.id_imagenToolbar);
+        String photoURL = SharedPreferencesManager.getSomeStringValue(Constant.PREFERENCE_URL_PHOTO);
+        if (!photoURL.isEmpty()){
+            Glide.with(this).load(Constant.FILES_URL + photoURL).into(imageViewPerfil);
+        }
+
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                NewTweetDialogFragment dialogFragment = new NewTweetDialogFragment();
+                dialogFragment.show(getSupportFragmentManager(), "NewTweetDialogFragment");
             }
         });
 

@@ -13,13 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.lcadevelop.android.minitwitter.R;
 import com.lcadevelop.android.minitwitter.retrofit.response.Tweet;
-import com.lcadevelop.android.minitwitter.ui.home.placeholder.PlaceholderContent;
 import java.util.List;
 
 
 public class TweetListFragment extends Fragment {
 
-    private static final String ARG_COLUMN_COUNT = "column-count";
     private int mColumnCount = 1;
 
     private List<Tweet> tweetList;
@@ -28,23 +26,11 @@ public class TweetListFragment extends Fragment {
     public TweetListFragment() {
     }
 
-    public static TweetListFragment newInstance(int columnCount) {
-        TweetListFragment fragment = new TweetListFragment();
-        Bundle args = new Bundle();
-        args.putInt(ARG_COLUMN_COUNT, columnCount);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         tweetViewModel = new ViewModelProvider(requireActivity()).get(TweetListViewModel.class);
-
-        if (getArguments() != null) {
-            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
-        }
     }
 
     @Override

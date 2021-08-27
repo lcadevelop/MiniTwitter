@@ -25,10 +25,11 @@
 
     <string name="listtweet_ok">Lista de Tweets</string>
     <string name="listtweet_fail">Error al recibir los Tweets</string>
+    <string name="newtweet_fail">Error al crear el Tweet</string>
 
     <string name="signup_ok">Registro Exitoso</string>
     <string name="signup_fail">Registro Fallido</string>
-    <string name="title_activity_prueba">PruebaActivity</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -42,4 +43,14 @@
     <string name="tweet_username">Tweet Username</string>
     <string name="tweet_message">Tweet Message</string>
     <string name="tweet_likes">0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="text_twittear">Twittear</string>
+    <string name="hint_mensaje_nuevo_tweet">¿Qué está pasando?</string>
+    <string name="delete_nuevo_tweet">Desea Eliminar Nuevo Tweet?</string>
+    <string name="delete_nuevo_tweet_title">Eliminar Nuevo Tweet</string>
+    <string name="nuevo_tweet_delete">Eliminar</string>
+    <string name="nuevo_tweet_cancel">Cancelar</string>
+    <string name="nuevo_tweet_empty">Debe escribir un tweet</string>
 </resources>

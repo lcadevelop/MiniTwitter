@@ -3,6 +3,7 @@ package com.lcadevelop.android.minitwitter.common;
 public class Constant
 {
     public static final String BASE_URL = "https://www.minitwitter.com:3001/apiv1/";
+    public static final String FILES_URL = "https://www.minitwitter.com/apiv1/uploads/photos/";
     public static final String SIGN_CODE = "UDEMYANDROID";
 
     public static final String PREFERENCE_TOKEN = "PREFERENCE_TOKEN";
